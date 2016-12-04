@@ -17,6 +17,10 @@ html, body {
 	margin: 10px auto;
 }
 
+#upload{
+    display:none
+}
+
 @media (max-width: 740px) {
     .cage {
 		margin: 10px;
@@ -27,6 +31,9 @@ html, body {
 	body .title a {
 		font-size: 1.65rem;
 	}
+}
+.jumbotron .btn-link {
+  cursor: pointer;
 }
 
 html body .muted {

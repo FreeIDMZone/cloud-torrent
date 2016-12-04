@@ -10,7 +10,7 @@
     Torrents
   </h3>
   <h5 class="ui files downloading header">
-    {{ numKeys(state.Torrents) }} torrent{{ numKeys(state.Torrents) == 1 && '' || 's' }}
+    {{ numKeys(state.Torrents) }} torrent{{ numKeys(state.Torrents) == 1 ? '' : 's' }}
   </h5>
 </div>
 
@@ -56,7 +56,7 @@
               ng-click="submitTorrent('start', t)">
               <i class="cloud download icon"></i> Start
             </a>
-            <a ng-if="t.Started" class="ui red button"
+            <a style="display:none" ng-if="t.Started" class="ui red button"
               ng-click="submitTorrent('stop', t)">
               <i class="stop icon"></i> Stop
             </a>
